@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"></link>
+{% endblock %}
+
+
+{% block body %}
+	<div class="wrapper">
+		<div class="search-input">
+			<a href="" target="_blank" hidden></a>
+			<input onkeyup="showResult(this.value)" type="text" placeholder="type to Search..">
+			<div class="autocom-box"><!--here list are inserted form javascrip -->
+			</div>
+			<div class="icon">
+				<i class="fas fa-search"></i>
+			</div>
+		</div>
+	</div>
+{% endblock %}
