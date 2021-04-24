@@ -1,20 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"></link>
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 {% endblock %}
-
 
 {% block body %}
 	<div class="wrapper">
 		<div class="search-input">
-			<a href="" target="_blank" hidden></a>
-			<input onkeyup="showResult(this.value)" type="text" placeholder="type to Search..">
-			<div class="autocom-box"><!--here list are inserted form javascrip -->
-			</div>
+			<input id="textfield" type="text" placeholder="Type to search..">
+			<div id="suggestions" class="suggestion-box"></div>
 			<div class="icon">
 				<i class="fas fa-search"></i>
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block js %}
+	{{ parent() }}
+	<script src="{{ asset('js/smartSearch.js') }}" type="text/javascript"></script>
 {% endblock %}

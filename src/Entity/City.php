@@ -72,4 +72,11 @@ class City
     {
         return $this->geonameid;
     }
+
+    public function setGeonameid(int $geonameid): self
+    {
+        $this->geonameid = $geonameid;
+
+        return $this;
+    }
 }
